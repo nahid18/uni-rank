@@ -12,7 +12,8 @@ Install the package by running:
 pip install uni-rank
 ```
 
-Usage:
+Usage
+----
 ```sh
 # import
 from unirank import Ranking
