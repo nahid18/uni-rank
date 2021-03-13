@@ -27,7 +27,8 @@ class Ranking:
                 if data.status_code == 200:
                     header_selected = headers
                     usnews = data.json()
-                    json.dump(usnews, open("apidata/1.json", 'w'))
+                    with open("apidata/1.json", 'w') as fw:
+                        json.dump(usnews, fw)
                     fetched = True
                     return {"totalPages": usnews['data']['totalPages'], "head": header_selected}
             except:
@@ -41,7 +42,8 @@ class Ranking:
                 page_raw = requests.get(url=url, headers=head, timeout=3)
                 if page_raw.status_code == 200:
                     page_data = page_raw.json()
-                    json.dump(page_data, open("apidata/"+str(page)+".json", 'w'))
+                    with open("apidata/"+str(page)+".json", 'w') as f:
+                        json.dump(page_data, f)
             except:
                 pass
 
