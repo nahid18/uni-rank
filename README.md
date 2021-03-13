@@ -31,6 +31,16 @@ print(usa)
 rank.save(usa, "usa_list.json")
 ```
 
+USA University Properties:
+----
+key | detail
+--- | ---
+`displayName` | University Name
+``rankingDisplayRank`` | Rank
+`state` | State
+`city` | City
+`zip` | Zip Code
+`description` | Description
 
 License
 ----
