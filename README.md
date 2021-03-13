@@ -33,6 +33,7 @@ print(usa)
 rank.save(usa, "usa_list.json")
 ```
 
+
 USA University Properties:
 ----
 key | detail
@@ -43,6 +44,11 @@ key | detail
 `city` | City
 `zip` | Zip Code
 `description` | Description
+
+
+Note
+----
+Intend to extend the package to support other types of rankings and also include other countries on later versions, hence the name `uni-rank` not `usa-rank`
 
 License
 ----
