@@ -1,6 +1,6 @@
 # Uni-rank
 
-Uni-rank provides you the latest list of university rankings around the world.
+Uni-rank provides you the latest ordered list of university rankings around the world. 
 
 Installation
 ----
@@ -21,7 +21,7 @@ from unirank import Ranking
 # instantiate
 rank = Ranking()
 
-# get the latest ranking of the USA universities
+# get the ordered list of USA universities
 usa = rank.get_usa()
 
 # print the result
