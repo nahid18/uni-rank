@@ -10,6 +10,16 @@ Uni-rank requires Python3 to run. Install the package by running:
 pip install uni-rank
 ```
 
+Get the latest USA university rankings:
+```sh
+from unirank import Ranking
+
+rank = Ranking()
+usa = rank.get_usa()
+
+print(usa)
+```
+
 License
 ----
 

@@ -5,3 +5,4 @@ apidata
 check.py
 __pycache__
 unirank/__pycache__
+.travis.yml
