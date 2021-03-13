@@ -12,23 +12,22 @@ Install the package by running:
 pip install uni-rank
 ```
 
-Import into your code:
+Usage:
 ```sh
+# import
 from unirank import Ranking
-```
 
-Get the latest USA Universities Ranking:
-```sh
+# instantiate
 rank = Ranking()
+
+# get the latest ranking of the USA universities
 usa = rank.get_usa()
+
+# print the result
 print(usa)
-```
 
-You can save the result as json:
-```sh
-rank = Ranking()
-usa = rank.get_usa()
-save(usa, "usa_list.json")
+# or, save the result as json
+rank.save(usa, "usa_list.json")
 ```
 
 
