@@ -35,7 +35,7 @@ USA University Properties:
 ----
 key | detail
 --- | ---
-`displayName` | University Name
+`displayName` | Name
 ``rankingDisplayRank`` | Rank
 `state` | State
 `city` | City
