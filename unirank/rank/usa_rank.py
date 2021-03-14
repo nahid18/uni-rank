@@ -11,7 +11,7 @@ class Ranking:
         self.api = "https://www.usnews.com/best-colleges/api/search?_sort=rank&_sortDirection=asc&schoolType=national-universities"
 
 
-    def __useragent(self):
+    def _useragent(self):
         agents = pkgutil.get_data(__package__, "useragents.txt").decode("utf-8")
         return random.choice(agents.splitlines())
 
@@ -22,7 +22,7 @@ class Ranking:
         fetched = False
         while fetched != True:
             try:
-                ua = self.__useragent()
+                ua = self._useragent()
                 headers = {"User-Agent": ua}
                 data = requests.get(url=self.api, headers=headers, timeout=3)
                 if data.status_code == 200:
@@ -82,6 +82,25 @@ class Ranking:
                     out["description"] = desc[3:-4]
                 complete_list.append(out)
         return complete_list
+
+
+    def print_names(self):
+        usa = self.get_usa()
+        names = [uni["displayName"] for uni in usa]
+        for name in names:
+            print(names)
+
+
+    def select_by_state(self, state_list):
+        df = pd.DataFrame(self.get_usa())
+        sub = df[df["state"].isin(state_list)]
+        return sub
+
+
+    def select_by_city(self, city_list):
+        df = pd.DataFrame(self.get_usa())
+        sub = df[df["city"].isin(city_list)]
+        return sub
 
 
     def save_json(self, inplist, filename):
