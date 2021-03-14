@@ -33,8 +33,11 @@ print(usa)
 names = [uni["displayName"] for uni in usa]
 print(names)
 
-# Optional: you can save the result as json
-rank.save(usa, "usa_list.json")
+# Optional: export as CSV
+rank.save_csv(usa, "usa_list.csv")
+
+# or, export as json
+rank.save_json(usa, "usa_list.json")
 ```
 
 
