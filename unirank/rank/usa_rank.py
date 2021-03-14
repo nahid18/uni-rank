@@ -1,4 +1,5 @@
 from glob import glob
+import pandas as pd
 import requests
 import pkgutil
 import random
@@ -83,19 +84,23 @@ class Ranking:
         return complete_list
 
 
-    def usa_total(self):
-        dirname = 'apidata'
-        self.__check_directory(dirname)
-        initial = self.__read_json(dirname+"/1.json")
-        return initial['data']['totalItems']
-
-
-    def save(self, inplist, filename):
+    def save_json(self, inplist, filename):
         if inplist != []:
             with open(filename, 'w') as fh:
                 fh.write(json.dumps(inplist, indent=4))
 
 
-    # if __name__ == "__main__":
-    #     usa = usa_school_ranking()
-    #     save_list(usa, 'usa.json')
+    def save_csv(self, inplist, filename):
+        if inplist != []:
+            df = pd.DataFrame(inplist)
+            df.to_csv(filename, index=False)
+
+    
+    def _connection(self):
+        try:
+            ua = self.__useragent()
+            headers = {"User-Agent": ua}
+            data = requests.get(url=self.api, headers=headers, timeout=3)
+            return data.status_code
+        except:
+            return 404

@@ -2,11 +2,10 @@ from unirank import Ranking
 import unittest
 
 class TestUnirank(unittest.TestCase):
-    def test_count(self):
+    def test_connection(self):
         rank = Ranking()
-        usa = rank.get_usa()
-        count = rank.usa_total()
-        self.assertEqual(len(usa), count)
+        status = rank._connection()
+        self.assertEqual(status, 200)
 
 if __name__ == '__main__':
   unittest.main()
