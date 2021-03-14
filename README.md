@@ -1,13 +1,15 @@
 # Uni-rank
 
-Uni-rank is a mini python package to get the ordered list of USA universities based on their latest ranking on [usnews.com](https://usnews.com/best-colleges)
+[![Build Status](https://www.travis-ci.com/nahid18/uni-rank.svg?branch=main)](https://www.travis-ci.com/nahid18/uni-rank)
 
-This package also provides few other information like state, city, zip code and the result can be stored as a json file.
+Uni-rank is a mini python package to get the ordered list of USA universities based on their latest ranking on [usnews.com/best-colleges](https://usnews.com/best-colleges)
+
+This package also provides few other information like state, city, zip code and the result can be stored as a `csv` or `json` file.
 
 Installation
 ----
 
-Uni-rank requires Python3 to run. 
+Uni-rank requires Python 3 to run. 
 
 Install the package by running:
 ```sh
@@ -25,18 +27,35 @@ rank = Ranking()
 
 # get the ordered list of USA universities
 usa = rank.get_usa()
-
-# print the result
 print(usa)
 
-# get the ordered list of university names
+
+### Helper Functions ###
+
+# 1. Print University Names
+rank.print_names()
+
+# 2. Select Universities by States
+# Input: State List, Output: DataFrame of filtered universities
+states = ['NJ', 'MA']
+state_result = rank.select_by_state(states)
+
+# 3. Select Universities by Cities
+# Input: City List, Output: DataFrame of filtered universities
+cities = ['Cambridge']
+city_result = rank.select_by_city(cities)
+
+# You can also get the ordered list by the properties
 names = [uni["displayName"] for uni in usa]
 print(names)
 
-# Optional: export as CSV
+
+### Export ###
+
+# Export as CSV
 rank.save_csv(usa, "usa_list.csv")
 
-# or, export as json
+# Export as json
 rank.save_json(usa, "usa_list.json")
 ```
 
