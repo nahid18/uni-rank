@@ -88,7 +88,7 @@ class Ranking:
         usa = self.get_usa()
         names = [uni["displayName"] for uni in usa]
         for name in names:
-            print(names)
+            print(name)
 
 
     def select_by_state(self, state_list):
