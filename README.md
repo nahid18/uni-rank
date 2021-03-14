@@ -29,7 +29,11 @@ usa = rank.get_usa()
 # print the result
 print(usa)
 
-# or, save the result as json
+# get the ordered list of university names
+names = [uni["displayName"] for uni in usa]
+print(names)
+
+# Optional: you can save the result as json
 rank.save(usa, "usa_list.json")
 ```
 
