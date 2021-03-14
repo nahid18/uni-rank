@@ -7,7 +7,7 @@ with open('requirements.txt') as f:
 long_description = 'Uni-rank provides you the latest list of university rankings around the world.' 
 
 setup(name='uni-rank',
-      version='0.1',
+      version='0.2',
       description='Get latest university rankings',
       url='http://github.com/nahid18/uni-rank',
       author='Abdullah Al Nahid',

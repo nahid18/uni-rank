@@ -94,16 +94,3 @@ class Ranking:
         if inplist != []:
             df = pd.DataFrame(inplist)
             df.to_csv(filename, index=False)
-
-    
-    def _connection(self):
-        fetched = False
-        while fetched != True:
-            try:
-                ua = self.__useragent()
-                headers = {"User-Agent": ua}
-                data = requests.get(url=self.api, headers=headers, timeout=3)
-                if data.status_code == 200:
-                    return data.status_code
-            except:
-                pass
