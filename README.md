@@ -3,7 +3,9 @@
 [![Build Status](https://www.travis-ci.com/nahid18/uni-rank.svg?branch=main)](https://www.travis-ci.com/nahid18/uni-rank)
 
 Uni-rank is a mini python package to get the ordered list of USA universities based on their latest ranking on [usnews.com/best-colleges](https://usnews.com/best-colleges)
+
 This package also provides few other information like `state`, `city`, `zip code`.
+
 The result can be stored as a `csv` or `json` file.
 
 Installation
