@@ -55,6 +55,7 @@ rank.get_top_names(100)
 ```sh
 states = ['NJ', 'MA']
 state_result = rank.select_by_state(states)
+print(state_result)
 ```
 
 **3. Filter Universities by Cities**
@@ -65,6 +66,7 @@ state_result = rank.select_by_state(states)
 ```sh
 cities = ['Cambridge']
 city_result = rank.select_by_city(cities)
+print(city_result)
 ```
 
 Export
