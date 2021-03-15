@@ -84,11 +84,15 @@ class Ranking:
         return complete_list
 
 
-    def print_names(self):
+    def get_names(self):
         usa = self.get_usa()
         names = [uni["displayName"] for uni in usa]
-        for name in names:
-            print(name)
+        return names
+
+
+    def get_top_names(self, num):
+        names = self.get_names()
+        return names[:num]
 
 
     def select_by_state(self, state_list):

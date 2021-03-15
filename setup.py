@@ -10,7 +10,7 @@ with open('README.md', encoding='utf-8') as readme, open('docs/history.md', enco
 DESCRIPTION_SHORT = 'Get the ordered list of USA universities based on their latest ranking.' 
 
 setup(name='uni-rank',
-      version='1.0.1',
+      version='1.0.2',
       description=DESCRIPTION_SHORT,
       long_description = DESCRIPTION, 
       long_description_content_type ="text/markdown", 

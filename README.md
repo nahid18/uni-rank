@@ -37,12 +37,17 @@ print(usa)
 Helper Functions
 ----
 
-**1. Print University Names**
+**1. Get University Names**
 ```sh
-rank.print_names()
+rank.get_uni_names()
 ```
 
-**2. Select Universities by States**
+**2. Get Top 100 university Names**
+```sh
+rank.select_top_names(100)
+```
+
+**2. Filter Universities by States**
 
 `Input`: State List, 
 `Output`: DataFrame of filtered universities
@@ -52,7 +57,7 @@ states = ['NJ', 'MA']
 state_result = rank.select_by_state(states)
 ```
 
-**3. Select Universities by Cities**
+**3. Filter Universities by Cities**
 
 `Input`: City List, 
 `Output`: DataFrame of filtered universities
