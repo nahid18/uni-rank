@@ -39,12 +39,12 @@ Helper Functions
 
 **1. Get University Names**
 ```sh
-rank.get_uni_names()
+rank.get_names()
 ```
 
-**2. Get Top 100 university Names**
+**2. Get Top 100 University Names**
 ```sh
-rank.select_top_names(100)
+rank.get_top_names(100)
 ```
 
 **2. Filter Universities by States**
